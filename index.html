@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Analisis M2SL & WALCL vs BTC</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>📊 Analisis Makroekonomi terhadap Bitcoin</h1>
+  </header>
+  <main>
+    <section class="controls">
+      <label>Dari: <input type="date" id="startDate" /></label>
+      <label>Sampai: <input type="date" id="endDate" /></label>
+      <button onclick="render()">🔍 Analisa</button>
+      <button onclick="generatePDF()">📄 Export PDF</button>
+    </section>
+
+    <section class="chart-container">
+      <h2>M2SL vs Bitcoin</h2>
+      <canvas id="m2slChart"></canvas>
+      <div id="m2slAnalysis" class="analysis-box"></div>
+    </section>
+
+    <section class="chart-container">
+      <h2>WALCL vs Bitcoin</h2>
+      <canvas id="walclChart"></canvas>
+      <div id="walclAnalysis" class="analysis-box"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 MacroBTC Analytics. Built by a 30yr Programmer.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
